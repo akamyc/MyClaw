@@ -2,6 +2,47 @@
 
 AI 助手，支持多模态对话、定时任务、长期记忆、MCP 工具调用等能力。
 
+
+## 快速开始
+
+### 1. 配置环境变量
+
+> **重要：** 必须先配置环境变量，否则启动时会报错。
+
+前往 [阿里云百炼平台](https://bailian.console.aliyun.com/) 注册并创建 API Key：
+
+1. 登录百炼控制台
+2. 进入「API-KEY管理」页面
+3. 点击「创建API-KEY」，复制生成的 Key
+
+在项目根目录创建 `.env` 文件：
+
+```bash
+DASHSCOPE_API_KEY=你的百炼API_KEY
+```
+
+### 2. 环境准备
+
+**要求：** Python >= 3.11，推荐使用 [uv](https://docs.astral.sh/uv/) 管理依赖。
+
+```bash
+# 克隆项目
+git clone https://github.com/akamyc/MyClaw.git
+cd myclaw
+
+# 安装依赖
+uv sync
+```
+
+### 3. 启动服务
+
+```bash
+uv run server.py
+```
+
+启动后访问 `http://localhost:8009` 即可使用。
+
+
 ## 功能概览
 
 | 功能 | 说明 |
@@ -16,46 +57,6 @@ AI 助手，支持多模态对话、定时任务、长期记忆、MCP 工具调�
 | Subagent | 复杂任务自动委托给子代理独立执行 |
 | 人格设定 | 在线编辑 AGENTS.md / SOUL.md / USER.md，热更新 |
 | Skill 系统 | 输入 `/` 触发技能提示，可扩展 SOP 流程 |
-
-## 快速开始
-
-### 1. 获取 API Key
-
-前往 [阿里云百炼平台](https://bailian.console.aliyun.com/) 注册并创建 API Key：
-
-1. 登录百炼控制台
-2. 进入「API-KEY管理」页面
-3. 点击「创建API-KEY」，复制生成的 Key
-
-### 2. 环境准备
-
-**要求：** Python >= 3.11，推荐使用 [uv](https://docs.astral.sh/uv/) 管理依赖。
-
-```bash
-# 克隆项目
-git clone <你的仓库地址>
-cd myclaw
-
-# 安装依赖
-uv sync
-```
-
-### 3. 配置环境变量
-
-创建 `.env` 文件：
-
-```bash
-DASHSCOPE_API_KEY=你的百炼API_KEY
-
-```
-
-### 4. 启动服务
-
-```bash
-uv run server.py
-```
-
-启动后访问 `http://localhost:8009` 即可使用。
 
 
 ## 配置说明
